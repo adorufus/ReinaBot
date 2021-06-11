@@ -1,1 +1,2 @@
-poetry
+discord==1.0.1
+pygelbooru==0.3.1
