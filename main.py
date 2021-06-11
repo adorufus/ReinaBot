@@ -50,11 +50,11 @@ async def on_message(message):
 
       print(arg2)
       if "-r" in message.content:
-        result = await gelbooru.search_posts(tags=arg3, limit=6)
+        result = await gelbooru.random_post(tags=arg3)
         await message.channel.send("searching random lewd image...")
-        
-        for i in range(len(result)):
-          await message.channel.send(str(result[i]))
+        await message.channel.send(str(result))
+        # for i in range(len(result)):
+        #   await message.channel.send(str(result[i]))
 
       else:
         if len(data) == 0:
